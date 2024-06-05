@@ -8,7 +8,7 @@ import InstagramIcon from "../../public/instagram 1.svg";
 
 function Location() {
   return (
-    <div className="max-w-screen-xl h-screen mt-11 md:flex-row justify-between bg-[#FEFBF6] flex flex-wrap mx-auto mb-96 md:mb-0">
+    <div id="about" className="max-w-screen-xl h-screen mt-11 md:flex-row justify-between bg-[#FEFBF6] flex flex-wrap mx-auto mb-96 md:mb-0">
       <div className="w-full md:w-1/2 px-8 md:p-8">
         <h1 className="text-4xl md:text-5xl pt-serif-bold mb-6">
           Discover Our Creative Space Here

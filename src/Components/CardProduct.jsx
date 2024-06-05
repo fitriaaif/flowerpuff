@@ -14,7 +14,7 @@ function CardProduct() {
         </a>
         <div className="pb-5 mt-4 items-center text-start">
           <a href="#">
-            <h5 className="text-xl pt-serif-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 className="text-xl pt-serif-bold tracking-tight text-gray-900">
               Eternal Bloom
             </h5>
           </a>

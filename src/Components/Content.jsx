@@ -4,7 +4,7 @@ import ContentImg from "../../public/Hand.png";
 
 function Content() {
   return (
-    <div id="about" className="max-w-screen h-[70%] md:flex md:flex-row items-center bg-[#FEFBF6] flex flex-wrap mx-auto mb-8 sm:mb-8">
+    <div className="max-w-screen h-[70%] md:flex md:flex-row items-center bg-[#FEFBF6] flex flex-wrap mx-auto mb-8 sm:mb-8">
       <div className="w-full md:w-1/2 flex mb-8 md:mb-0 justify-end">
         <Image src={ContentImg} alt="Hero Image" className="w-full" />
       </div>

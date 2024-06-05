@@ -10,8 +10,8 @@ function CardReview() {
       <div className="pb-5 mt-4 text-center">
         <a href="#">
           <h5 className="text-xl pt-serif tracking-tight text-gray-900">
-            "Bouquet Flowers looks just like the picture! Wonderful present for
-            my sister. Fresh and beautiful. Great summer bouquet!"
+            Bouquet Flowers looks just like the picture! Wonderful present for
+            my sister. Fresh and beautiful. Great summer bouquet!
           </h5>
         </a>
       </div>

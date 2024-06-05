@@ -15,7 +15,7 @@ export default function Home() {
         <Navbar/>
         <Hero/>
         <PageBreak/>
-        <Content id="about" />
+        <Content/>
         <div className="mt-28">
         <CardList/>
         </div>

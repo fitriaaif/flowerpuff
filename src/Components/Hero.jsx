@@ -1,6 +1,8 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import HeroImg from "../../public/HeroImage.png";
+import { sendGTMEvent } from '@next/third-parties/google'
 
 function Hero() {
   return (
@@ -13,7 +15,10 @@ function Hero() {
           Bouquet is a perfect gift for every person, make your special person
           love you, order our bouquet now.
         </p>
-        <button className="pt-serif-bold text-white bg-[#E6A4B4] hover:bg-[#FEFBF6] hover:text-[#E6A4B4] border border-[#E6A4B4] focus:ring-4 focus:outline-none font-large rounded-[30px] text-sm px-16 py-2 text-center md:visible md:w-auto md:p-4 md:block">
+        <button
+          onClick={() => sendGTMEvent({ event: "buttonClicked", value: "xyz" })}
+          className="pt-serif-bold text-white bg-[#E6A4B4] hover:bg-[#FEFBF6] hover:text-[#E6A4B4] border border-[#E6A4B4] focus:ring-4 focus:outline-none font-large rounded-[30px] text-sm px-16 py-2 text-center md:visible md:w-auto md:p-4 md:block"
+        >
           Order Now
         </button>
       </div>

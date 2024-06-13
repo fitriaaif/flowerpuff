@@ -7,11 +7,13 @@ import CardList from "../Components/CardProductList"
 import CardReviewList from "../Components/CardReviewList"
 import Location from "../Components/Location"
 import Footer from "../Components/Footer"
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export default function Home() {
   return (
     <main>
       <div>
+        <GoogleTagManager gtmId="G-CQFRF5Y66E" />
         <Navbar/>
         <Hero/>
         <PageBreak/>

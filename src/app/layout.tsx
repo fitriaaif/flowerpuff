@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Head from "next/head";
+import Script from "next/script";
+
 
 export const metadata: Metadata = {
   title: "FlowerStuff",

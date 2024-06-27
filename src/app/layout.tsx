@@ -14,8 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="G-CQFRF5Y66E" />
-      <body>{children}</body>
+      <GoogleTagManager gtmId="G-B20N8LCNY3" />
+      <body>{children}
+        <GoogleTagManager gtmId="G-B20N8LCNY3" />
+      </body>
     </html>
   );
 }

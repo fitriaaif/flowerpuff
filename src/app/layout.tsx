@@ -1,11 +1,14 @@
+// Import library and styles
 import './globals.css';
 import { ReactNode } from 'react';
 import Head from 'next/head';
 
+// Define interface for layout props
 interface LayoutProps {
   children: ReactNode;
 }
 
+// Define layout component
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
@@ -13,7 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
         <title>My Page Title</title>
         <meta name="description" content="My page description" />
         <link rel="icon" href="/favicon.ico" />
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -26,8 +29,26 @@ const Layout = ({ children }: LayoutProps) => {
           }}
         />
         {/* End Google Tag Manager */}
+        {/* Google Analytics gtag.js */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-B20N8LCNY3"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-B20N8LCNY3');
+            `,
+          }}
+        />
+        {/* End Google Analytics */}
       </Head>
       <body>
+        {/* GTM noscript iframe */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TWN2GXHC"
@@ -36,6 +57,7 @@ const Layout = ({ children }: LayoutProps) => {
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
+        {/* Render children components */}
         {children}
       </body>
     </html>

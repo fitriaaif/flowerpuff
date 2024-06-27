@@ -1,13 +1,14 @@
-import React, { ReactNode } from 'react';
+import './globals.css';
+import { ReactNode } from 'react';
 import Head from 'next/head';
 
 interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <html lang="en">
       <Head>
         <title>My Page Title</title>
         <meta name="description" content="My page description" />
@@ -26,16 +27,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         />
         {/* End Google Tag Manager */}
       </Head>
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-TWN2GXHC"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        ></iframe>
-      </noscript>
-      <main>{children}</main>
-    </>
+      <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TWN2GXHC"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {children}
+      </body>
+    </html>
   );
 };
 

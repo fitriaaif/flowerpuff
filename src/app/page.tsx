@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <GoogleTagManager gtmId="G-CQFRF5Y66E" />
+        <GoogleTagManager gtmId="G-B20N8LCNY3" />
         <Navbar/>
         <Hero/>
         <PageBreak/>

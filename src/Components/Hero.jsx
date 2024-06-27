@@ -1,9 +1,14 @@
 'use client';
 import Image from "next/image";
 import HeroImg from "../../public/HeroImage.png";
-import { sendGTMEvent } from "../utils/gtm";  // Sesuaikan path ini
+import { sendGTMEvent } from "../utils/gtm";
 
 function Hero() {
+  const handleButtonClick = () => {
+    sendGTMEvent({ event: "buttonClicked", value: "Order Now" });
+    window.location.href = "https://wa.me/6285163158518?text=Mau pesen buket bunga dong bestie.";
+  };
+
   return (
     <div className="max-w-screen-xl h-screen md:flex-row items-center justify-between bg-[#FEFBF6] flex flex-wrap mx-auto">
       <div className="w-full px-8 md:w-1/2 p-8 md:px-8">
@@ -15,7 +20,7 @@ function Hero() {
           love you, order our bouquet now.
         </p>
         <button
-          onClick={() => sendGTMEvent({ event: "buttonClicked", value: "xyz" })}
+          onClick={handleButtonClick}
           className="pt-serif-bold text-white bg-[#E6A4B4] hover:bg-[#FEFBF6] hover:text-[#E6A4B4] border border-[#E6A4B4] focus:ring-4 focus:outline-none font-large rounded-[30px] text-sm px-16 py-2 text-center md:visible md:w-auto md:p-4 md:block"
         >
           Order Now

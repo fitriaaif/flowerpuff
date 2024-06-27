@@ -1,7 +1,7 @@
-// Import library and styles
 import './globals.css';
 import { ReactNode } from 'react';
 import Head from 'next/head';
+import Script from 'next/script';
 
 // Define interface for layout props
 interface LayoutProps {
@@ -29,25 +29,24 @@ const Layout = ({ children }: LayoutProps) => {
           }}
         />
         {/* End Google Tag Manager */}
-        {/* Google Analytics gtag.js */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-B20N8LCNY3"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-B20N8LCNY3');
-            `,
-          }}
-        />
-        {/* End Google Analytics */}
       </Head>
       <body>
+        {/* Google Analytics gtag.js */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-B20N8LCNY3"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-B20N8LCNY3');
+          `}
+        </Script>
+        {/* End Google Analytics */}
+        
         {/* GTM noscript iframe */}
         <noscript>
           <iframe
@@ -57,6 +56,7 @@ const Layout = ({ children }: LayoutProps) => {
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
+        
         {/* Render children components */}
         {children}
       </body>

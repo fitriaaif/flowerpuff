@@ -1,8 +1,7 @@
-'use client'
+'use client';
 import Image from "next/image";
-import Link from "next/link";
 import HeroImg from "../../public/HeroImage.png";
-import { sendGTMEvent } from '@next/third-parties/google'
+import { sendGTMEvent } from "../utils/gtm";  // Sesuaikan path ini
 
 function Hero() {
   return (

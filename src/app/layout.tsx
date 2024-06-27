@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: "FlowerStuff",
-  description: "Perfect Flower Bouqet for Every Occasion",
+  description: "Perfect Flower Bouquet for Every Occasion",
 };
 
 export default function RootLayout({
@@ -14,8 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="G-CQFRF5Y66E" />
-      <body>{children}</body>
+      <Head>
+        <meta name="google-site-verification" content="cLGKC8jY78AzVoQqdiU66Mv2X-IWi5MOJzdvmXT8QbI" />
+      </Head>
+      <body>
+        {children}
+        <GoogleTagManager gtmId="G-B20N8LCNY3" />
+      </body>
+      <GoogleTagManager gtmId="G-B20N8LCNY3" />
     </html>
   );
 }

@@ -15,7 +15,12 @@ const config: Config = {
       },
     },
   },
-  darkMode: 'class',
   plugins: [],
 };
+
+// Tambahkan kondisi untuk production environment
+if (process.env.NODE_ENV === "production") {
+  // Tambahkan konfigurasi tambahan di sini jika diperlukan
+}
+
 export default config;

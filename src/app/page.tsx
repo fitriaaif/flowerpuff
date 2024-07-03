@@ -12,8 +12,10 @@ import Script from 'next/script';
 export default function Home() {
   return (
     <main>
-      <div>
+      <div className="w-full">
+        <div className="mb-28">
         <Navbar/>
+        </div>
         <Hero/>
         <PageBreak/>
         <Content/>

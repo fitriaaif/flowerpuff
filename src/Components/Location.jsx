@@ -8,6 +8,7 @@ import InstagramIcon from "../../public/instagram 1.svg";
 
 function Location() {
   return (
+    <div className="w-full">
     <div
       id="about"
       className="max-w-screen-xl h-screen mt-11 md:flex-row justify-between bg-[#FEFBF6] flex flex-wrap mx-auto mb-96 md:mb-0"
@@ -52,6 +53,7 @@ function Location() {
       <div className="w-xl md:w-1/2 flex justify-center md:justify-end py-8 md:mb-0">
         <Map className="sm:hidden md:block radius-xl mx-auto md:mx-0" />
       </div>
+    </div>
     </div>
   );
 }

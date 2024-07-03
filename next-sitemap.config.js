@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl:'https://www.yoursite.com',
+  siteUrl:'https://flowerpuff.vercel.app',
   generateRobotsTxt: true, 
 };
 
